@@ -17,7 +17,7 @@ const TodoList = props => {
           togglePurchased={props.togglePurchased}
         />
       ))}
-      <button className="clear-btn" onClick={props.clearPurchased}>
+      <button className="clear-btn" onClick={props.clearPurchased1}>
         Clear Purchased
       </button>
     </div>

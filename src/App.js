@@ -41,20 +41,12 @@ class App extends React.Component {
     });
   };
 
-  // clearPurchased = id => {
-  //   this.setState({
-  //     todos: this.state.todos.map(item => {
-  //       if (item.id === id) {
-  //         return {
-  //           ...item,
-  //           purchased: !item.purchased
-  //         };
-  //       } else {
-  //         return item;
-  //       }
-  //     })
-  //   })
-  // }
+  clearPurchased = () => {
+
+    this.setState({
+      todos: this.state.todos.filter(item => !item.purchased)
+    })
+  }
 
   togglePurchased = id => {
     this.setState({
@@ -73,15 +65,18 @@ class App extends React.Component {
   
   render() {
     return (
-      <div>
-        <div>
-          <h2>Welcome to your Todo App!</h2>
+      <div className='App'>
+        <h2>Welcome to your Todo App!</h2>
+        <div className='Header'>
           <TodoForm addTodo1={this.addTodo}/>
         </div>
+        <div className='Body'>
       <TodoList
         togglePurchased={this.togglePurchased}
         todos={this.state.todos}
+        clearPurchased1={this.clearPurchased}
       />
+      </div>
       </div>
     );
   }
