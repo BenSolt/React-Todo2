@@ -3,9 +3,9 @@
 
 import React from 'react';
 
-import Item from './Item';
+import Todo from './Todo';
 
-const GroceryList = props => {
+const TodoList = props => {
   // const sortedList = props.groceries.sort((a, b) => a.purchased - b.purchased);
   return (
     <div className="shopping-list">
@@ -23,4 +23,4 @@ const GroceryList = props => {
   );
 };
 
-export default GroceryList;
+export default TodoList;
