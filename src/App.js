@@ -1,5 +1,9 @@
 import React from 'react';
 
+import TodoList from './components/TodoComponents/TodoList';
+import TodoForm from './components/TodoComponents/TodoForm';
+import './components/TodoComponents/Todo.css'
+
 const data = [
   {
   name: 'do first',
@@ -27,7 +31,7 @@ class App extends React.Component {
   }
 
   addTodo = name => {
-    const newTodo ={
+    const newTodo = {
       name: name,
       id: Date.now(),
       purchased: false
@@ -36,6 +40,21 @@ class App extends React.Component {
       todos: [...this.state.todos, newTodo]
     });
   };
+
+  // clearPurchased = id => {
+  //   this.setState({
+  //     todos: this.state.todos.map(item => {
+  //       if (item.id === id) {
+  //         return {
+  //           ...item,
+  //           purchased: !item.purchased
+  //         };
+  //       } else {
+  //         return item;
+  //       }
+  //     })
+  //   })
+  // }
 
   togglePurchased = id => {
     this.setState({
@@ -57,7 +76,7 @@ class App extends React.Component {
       <div>
         <div>
           <h2>Welcome to your Todo App!</h2>
-          <TodoList addTodo1={this.addTodo}/>
+          <TodoForm addTodo1={this.addTodo}/>
         </div>
       <TodoList
         togglePurchased={this.togglePurchased}
