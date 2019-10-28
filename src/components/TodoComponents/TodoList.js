@@ -8,11 +8,11 @@ import Todo from './Todo';
 const TodoList = props => {
   // const sortedList = props.groceries.sort((a, b) => a.purchased - b.purchased);
   return (
-    <div className="shopping-list">
-      {props.groceries.map(item => (
-        <Item
+    <div className="todo-list">
+      {props.todos.map(item => (
+        <Todo
           key={item.id}
-          item={item}
+          item1={item}
           togglePurchased={props.togglePurchased}
         />
       ))}

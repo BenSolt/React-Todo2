@@ -4,7 +4,7 @@ class TodoForm extends React.Component {
 constructor() {
     super();
     this.state = {
-
+        newTodo: ''
     }
 }
 
@@ -18,8 +18,8 @@ handleChanges = e => {
 handleSubmit = e => {
     e.preventDefault();
     console.log('submit working');
-    // this.props.a
-    this.setState({newTodo: ''});
+    this.props.addTodo(this.state.newTodo);
+    this.setState({ newTodo: ''});
 };
 
 render() {
