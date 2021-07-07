@@ -1,0 +1,44 @@
+  .App{
+    background: lightblue;
+    border: 2px solid black;
+    margin: 5%;
+  }
+h2{
+  display: flex;
+  justify-content: center; 
+}
+  .Header{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .Body{
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid red; */
+  }
+
+  .todo-list{
+    
+    width: 80%;
+   
+  }
+  
+  .todo {
+    background-color: white;
+    width: 80%;
+    text-align: center;
+    margin: 10px 0;
+    padding: 1px;
+    cursor: pointer;
+  }
+
+  .todo.purchased  {
+    background-color: rgb(144, 144, 255);
+    text-decoration: line-through;
+  }
+
+  .clear-btn{
+    padding: 5px;
+    margin: 10px;
+  }
